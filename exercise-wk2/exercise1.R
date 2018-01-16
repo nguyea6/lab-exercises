@@ -34,8 +34,9 @@ said.the.famous <- paste(my.line, " - ", initial)
 # Write a function `CompareLength` that takes in 2 vectors, and returns the sentence:
 # "The difference in lengths is N"
 CompareLength <- function(vector1, vector2) {
-    difference <- length(vector1) - length(vector2)
-    paste("The difference in lengths is", difference)
+    difference <- abs(length(vector1) - length(vector2))
+    out <- paste("The difference in lengths is", difference)
+    return(out)
 }
 
 # Pass two vectors of different length to your `CompareLength` function
